@@ -32213,7 +32213,7 @@ a[data-is-open-in-new-window="true"]
       gap: 15px;
       padding: 20px;
       border-radius: 15px;
-      background: linear-gradient(135deg, #00cfff, #ffffff);
+      background: linear-gradient(135deg, cyan, #ffffff);
       box-shadow: 0 10px 25px rgba(0,0,0,0.1);
       transition: all 0.4s ease;
       opacity: 0;
