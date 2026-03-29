@@ -31918,7 +31918,7 @@ a[data-is-open-in-new-window="true"]
         .EcProductIntroPlate__Swiper
         .EcProductIntroPlate__Wrapper
         .EcProductIntroPlate__Slide {
-        background-color: white;
+        background-color: transparent;
     }
     .EcPdpArea_container
         .ProductDetails_container
