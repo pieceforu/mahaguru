@@ -15028,13 +15028,19 @@ a[data-is-open-in-new-window="true"]
     padding-left: 2.1px;
     padding-bottom: 0.3px;
 }
-.EcPdpArea_container .ProductSummary_container .Description_reviews_wrapper {
+.EcPdpArea_container
+.ProductSummary_container
+.Description_reviews_wrapper {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto 379px;
     grid-template-columns: auto 379px;
     margin-top: 24px;
     gap: 35px;
+    background: linear-gradient(284deg, #aeffd4, #9ffffb8f, #fff9c0b3);
+    padding: 20px 20px 20px 20px;
+    border: 2px groove yellow;
+    border-radius: 30px;
 }
 .EcPdpArea_container .ProductSummary_container .FunctionLogos_awards_wrapper {
     display: -ms-grid;
@@ -15048,7 +15054,7 @@ a[data-is-open-in-new-window="true"]
     .ProductDescription_container
     .ProductDescription_catchCopy {
     font-family: SST W01 Roman, Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 22px;
+    font-size: 30px;
     letter-spacing: -0.3px;
     line-height: 1.455;
     color: #fffc00;
@@ -15075,7 +15081,7 @@ a[data-is-open-in-new-window="true"]
     font-size: 15px;
     letter-spacing: -0.2px;
     line-height: 1.6;
-    color: #6f6f75;
+    color: white;
     margin: 0;
     margin-right: 10px;
 }
@@ -21169,10 +21175,12 @@ a[data-is-open-in-new-window="true"]
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    background: white 0 0 no-repeat padding-box;
+    background: linear-gradient(45deg, black, #00ecff);
+    border: 2px groove yellow;
+    border-radius: 30px;
     opacity: 1;
     padding: 0;
-    min-height: 56px;
+    min-height: 3.5rem;
     height: 100%;
 }
 .pdn-desktop__static {
