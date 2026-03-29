@@ -32200,7 +32200,8 @@ a[data-is-open-in-new-window="true"]
     }
 
     /* CONTAINER */
-    .comment-section {
+    .comment-section,
+    .comment-card-mahaguru {
       display: grid;
       gap: 20px;
       padding: 30px;
