@@ -13130,7 +13130,7 @@ a[data-is-open-in-new-window="true"]
     font-size: 28px;
     letter-spacing: -0.3px;
     line-height: 32px;
-    color: #1f2024;
+    color: #fffc00;
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box;
@@ -15051,7 +15051,7 @@ a[data-is-open-in-new-window="true"]
     font-size: 22px;
     letter-spacing: -0.3px;
     line-height: 1.455;
-    color: #1f2024;
+    color: #fffc00;
     margin-bottom: 4px;
     font-weight: unset;
 }
@@ -21205,7 +21205,7 @@ a[data-is-open-in-new-window="true"]
     font-size: 18px;
     font-family: SST W01 Bold, sans-serif;
     letter-spacing: -0.34px;
-    color: #1f2024;
+    color: #fffc00;
     opacity: 1;
     margin-right: 12px;
     margin-top: 3px;
@@ -21222,7 +21222,7 @@ a[data-is-open-in-new-window="true"]
     font-size: 18px;
     font-family: SST W01 Bold, sans-serif;
     letter-spacing: -0.18px;
-    color: #1f2024;
+    color: #fffc00;
     opacity: 1;
     margin-top: 3px;
     max-width: 148px;
@@ -22820,7 +22820,7 @@ a[data-is-open-in-new-window="true"]
 .ECSoftBundle_Container_Title .title {
     font-size: 20px;
     margin: 0;
-    color: #1f2024;
+    color: #fffc00;
     margin-bottom: 40px;
     font-family: SST W01 Roman, sans-serif, Helvetica Neue, Helvetica, Arial;
     letter-spacing: -0.2px;
@@ -23424,7 +23424,7 @@ a[data-is-open-in-new-window="true"]
     line-clamp: 1;
     font-family: SST W01 Medium, sans-serif, Helvetica Neue, Helvetica, Arial;
     font-size: 13px;
-    color: #1f2024;
+    color: #fffc00;
     margin-top: 8px;
     line-height: 21px;
 }
@@ -23451,7 +23451,7 @@ a[data-is-open-in-new-window="true"]
     font-family: SST W01 Medium, sans-serif, Helvetica Neue, Helvetica, Arial;
     font-size: 13px;
     letter-spacing: -0.12px;
-    color: #1f2024;
+    color: #fffc00;
     max-width: 173px;
     margin-bottom: 0;
     line-height: 16px;
@@ -23589,7 +23589,7 @@ a[data-is-open-in-new-window="true"]
 .ECDealsAndOffers .title {
     font-size: 20px;
     margin: 0;
-    color: #1f2024;
+    color: #fffc00;
     margin-bottom: 40px;
     font-family: SST W01 Roman, sans-serif, Helvetica Neue, Helvetica, Arial;
     letter-spacing: -0.2px;
@@ -24188,7 +24188,7 @@ a[data-is-open-in-new-window="true"]
     margin-top: 24px;
 }
 .pricematch_container .pricematch_success_container .pricematch_success_title {
-    color: #1f2024;
+    color: #fffc00;
     font-size: 22px;
     letter-spacing: -0.24px;
     margin-bottom: 30px;
@@ -24875,7 +24875,7 @@ a[data-is-open-in-new-window="true"]
     font-size: 22px;
     line-height: 28px;
     letter-spacing: -0.2px;
-    color: #1f2024;
+    color: #fffc00;
     font-weight: unset;
     font-family: SST W01 Roman !important;
 }
