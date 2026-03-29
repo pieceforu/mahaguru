@@ -1,0 +1,37 @@
+/* ====== AREA UTAMA ====== */
+.naga-gif {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* ====== GAYA DASAR NAGA ====== */
+.naga-full {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain; /* tetap proporsional */
+  opacity: 1; /* lebih jelas */
+  filter: drop-shadow(0 0 35px rgba(255,255,255,0.9)) brightness(1.2) contrast(1.2);
+  transform: translateY(-50%);
+  transition: all 2.8s ease-in-out;
+}
+
+/* ====== NAGA KIRI ====== */
+.naga-kiri {
+  left: -100%;
+  background-image: url("https://dragon-bonar.b-cdn.net/naga-bonar.webp");
+  background-position: center left;
+}
+
+/* ====== NAGA KANAN ====== */
+.naga-kanan {
+  right: -100%;
+  background-image: url("https://dragon-bonar.b-cdn.net/naga-bonar.webp");
+  background-position: center right;
+  transform: translateY(-50%) rotateY(180deg); /* Hadap kiri tapi rapi */
+}
