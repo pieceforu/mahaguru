@@ -32207,7 +32207,7 @@ a[data-is-open-in-new-window="true"]
     }
     
     /* CARD */
-    .comment-card {
+    .comment-card-mahaguru {
       display: flex;
       align-items: flex-start;
       gap: 15px;
@@ -32222,13 +32222,13 @@ a[data-is-open-in-new-window="true"]
     }
     
     /* DELAY ANIMATION */
-    .comment-card:nth-child(1){animation-delay:0.1s;}
-    .comment-card:nth-child(2){animation-delay:0.2s;}
-    .comment-card:nth-child(3){animation-delay:0.3s;}
-    .comment-card:nth-child(4){animation-delay:0.4s;}
+    .comment-card-mahaguru:nth-child(1){animation-delay:0.1s;}
+    .comment-card-mahaguru:nth-child(2){animation-delay:0.2s;}
+    .comment-card-mahaguru:nth-child(3){animation-delay:0.3s;}
+    .comment-card-mahaguru:nth-child(4){animation-delay:0.4s;}
     
     /* HOVER EFFECT */
-    .comment-card:hover {
+    .comment-card-mahaguru:hover {
       transform: translateY(-5px) scale(1.01);
       box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     }
