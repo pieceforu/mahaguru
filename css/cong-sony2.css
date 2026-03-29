@@ -32206,26 +32206,21 @@ a[data-is-open-in-new-window="true"]
       padding: 30px;
     }
     
-    /* CARD */
     .comment-card-mahaguru {
       display: flex;
       align-items: flex-start;
       gap: 15px;
       padding: 20px;
       border-radius: 15px;
-    
       background: #00cfff;
-      background: -webkit-linear-gradient(135deg, #00cfff 0%, #ffffff 100%);
+      background: -webkit-linear-gradient(135deg, cyan 0%, #ffffff 100%);
       background: linear-gradient(135deg, #00cfff 0%, #ffffff 100%);
       background-repeat: no-repeat;
       background-size: cover;
-    
       position: relative;
       z-index: 1;
-    
       box-shadow: 0 10px 25px rgba(0,0,0,0.1);
       transition: all 0.4s ease;
-    
       opacity: 0;
       transform: translateY(30px);
       animation: fadeUp 0.8s ease forwards;
