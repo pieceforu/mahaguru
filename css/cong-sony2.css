@@ -32200,8 +32200,7 @@ a[data-is-open-in-new-window="true"]
     }
 
     /* CONTAINER */
-    .comment-section,
-    .comment-card-mahaguru {
+    .comment-section {
       display: grid;
       gap: 20px;
       padding: 30px;
@@ -32214,27 +32213,34 @@ a[data-is-open-in-new-window="true"]
       gap: 15px;
       padding: 20px;
       border-radius: 15px;
-      background: linear-gradient(135deg, cyan, #ffffff);
+    
+      background: #00cfff;
+      background: -webkit-linear-gradient(135deg, #00cfff 0%, #ffffff 100%);
+      background: linear-gradient(135deg, #00cfff 0%, #ffffff 100%);
+      background-repeat: no-repeat;
+      background-size: cover;
+    
+      position: relative;
+      z-index: 1;
+    
       box-shadow: 0 10px 25px rgba(0,0,0,0.1);
       transition: all 0.4s ease;
+    
       opacity: 0;
       transform: translateY(30px);
       animation: fadeUp 0.8s ease forwards;
     }
     
-    /* DELAY ANIMATION */
     .comment-card-mahaguru:nth-child(1){animation-delay:0.1s;}
     .comment-card-mahaguru:nth-child(2){animation-delay:0.2s;}
     .comment-card-mahaguru:nth-child(3){animation-delay:0.3s;}
     .comment-card-mahaguru:nth-child(4){animation-delay:0.4s;}
-    
-    /* HOVER EFFECT */
+    .comment-card-mahaguru:nth-child(5){animation-delay:0.5s;}
     .comment-card-mahaguru:hover {
       transform: translateY(-5px) scale(1.01);
       box-shadow: 0 15px 35px rgba(0,0,0,0.2);
     }
     
-    /* AVATAR */
     .comment-avatar img {
       width: 60px;
       height: 60px;
@@ -32243,36 +32249,44 @@ a[data-is-open-in-new-window="true"]
       border: 3px solid #00cfff;
     }
     
-    /* CONTENT */
     .comment-content {
       flex: 1;
     }
     
-    /* NAME */
     .comment-name {
       font-weight: bold;
       color: gold;
       font-size: 16px;
     }
     
-    /* STAR */
     .comment-star {
       color: gold;
       margin-bottom: 5px;
     }
     
-    /* TEXT */
     .comment-text {
       color: #333;
       font-size: 14px;
       line-height: 1.5;
     }
     
-    /* ANIMATION */
     @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
       to {
         opacity: 1;
         transform: translateY(0);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .comment-card-mahaguru {
+        flex-direction: row;
+        align-items: flex-start;
+        background: #00cfff !important;
+        background: linear-gradient(135deg, #00cfff, #ffffff) !important;
       }
     }
     .ECSoftBundle_Container_Wrapper.withoutSlider
