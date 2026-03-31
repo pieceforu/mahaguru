@@ -40,7 +40,7 @@ li.media .media-heading span.name {
 }
 
 .product-info-list {
-    background: cyan;
+    background: green;
 }
 
 .rain-drop {
@@ -131,14 +131,14 @@ li.media .media-heading span.name {
 .open,
 .last_item,
 .blue {
-    background: linear-gradient(180deg, black, cyan) !important;
+    background: linear-gradient(180deg, black, green) !important;
     color: yellow;
 }
 
 .ml-btm-menu #menu-toggle-button {
     padding: 8px 20px;
     cursor: pointer;
-    background: linear-gradient(180deg, black, cyan);
+    background: linear-gradient(180deg, black, green);
     box-shadow: 0 0 0 transparent;
     color: yellow;
     font-size: 14px;
@@ -152,7 +152,7 @@ h2.title {
     font-weight: 600;
     font-size: 20px;
     margin: 20px 0 40px 0;
-    border-left: 3px solid cyan;
+    border-left: 3px solid green;
     color: yellow;
     overflow: hidden;
     white-space: nowrap;
