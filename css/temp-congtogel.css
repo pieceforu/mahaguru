@@ -39,7 +39,8 @@ body {
 .review-summary,
 .rating-distribution,
 .write-review {
-    background: linear-gradient(145deg, #000000, #1a0000);
+    background: linear-gradient(
+360deg, #000000, #a20000);
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 12px;
     margin-bottom: 14px;
