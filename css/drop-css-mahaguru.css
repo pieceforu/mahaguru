@@ -1,0 +1,36 @@
+/* === Falling Image Overlay === */
+.snow-wrap{
+  position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:9999;
+}
+
+/* basic item (gambar) */
+.snowflake{
+  position:absolute; top:-10vh;
+  width:30px; height:30px;
+  background-image: url('https://i.pinimg.com/originals/a0/51/58/a05158ed51bb636df0c6542a3892b3ed.gif'); /* GANTI LINK DI SINI */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity:.95;
+  animation:
+    fall var(--dur,12s) linear var(--delay,0s) infinite,
+    sway var(--sway,6s) ease-in-out var(--delay,0s) infinite alternate;
+  will-change: transform;
+}
+
+/* motion */
+@keyframes fall {
+  to { transform: translate3d(var(--drift, 0px), 110vh, 0) rotate(var(--rot, 180deg)); }
+}
+@keyframes sway {
+  from { margin-left: -10px; } to { margin-left: 10px; }
+}
+
+/* size variations */
+.snowflake.-sm { width:20px; height:20px; opacity:.8; }
+.snowflake.-lg { width:40px; height:40px; opacity:.9; }
+
+/* reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .snowflake { animation: none; }
+}
