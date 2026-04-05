@@ -1,4 +1,3 @@
-<script>
 (function(){
   const wrap = document.getElementById('snow');
   const COUNT = 200;
@@ -23,4 +22,3 @@
     wrap.appendChild(f);
   }
 })();
-</script>
